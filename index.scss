@@ -1,0 +1,70 @@
+@font-face {
+	font-family: 'JetBrains Mono ExtraBold';
+	src: url('https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/web/woff/JetBrainsMono-ExtraBold.woff');
+}
+
+body {
+	background: #111;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	height: 100vh;
+	margin: 0 auto;
+}
+
+h1 {
+	font-size: 5rem;
+	color: #fff;
+	font-family: 'JetBrains Mono Extrabold';
+}
+
+.rubber-span {
+	display: inline-block;
+	cursor: default;
+}
+
+.rubber-band {
+	user-select: none;
+	white-space: pre-wrap;
+}
+
+.rubberBand {
+	animation-name: rubberBand;
+	transition: all 0.3s ease-out;
+	will-change: transform;
+}
+
+.rubberBand:hover {
+	color: #02d463;
+	transition: all 0.3s;
+}
+
+.animated {
+	animation-duration: 1s;
+	animation-fill-mode: both;
+}
+
+@keyframes rubberBand {
+	0% {
+		transform: scale3d(1, 1, 1);
+	}
+	30% {
+		transform: scale3d(1.25, 0.75, 1);
+	}
+	40% {
+		transform: scale3d(0.75, 1.25, 1);
+	}
+	50% {
+		transform: scale3d(1.15, 0.85, 1);
+	}
+	65% {
+		transform: scale3d(0.95, 1.05, 1);
+	}
+	75% {
+		transform: scale3d(1.05, 0.95, 1);
+	}
+	100% {
+		transform: scale3d(1, 1, 1);
+	}
+}
